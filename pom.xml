@@ -17,6 +17,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>client-api</module>
+        <module>service</module>
     </modules>
 
     <properties>
