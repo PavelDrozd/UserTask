@@ -19,6 +19,9 @@
         <module>client-api</module>
         <module>service</module>
         <module>store</module>
+        <module>shared</module>
+        <module>shared/util</module>
+        <module>shared/exception</module>
     </modules>
 
     <properties>
