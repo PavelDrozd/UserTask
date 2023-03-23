@@ -1,4 +1,4 @@
-package com.it_academy.service;
+package com.it_academy.service.serv;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
