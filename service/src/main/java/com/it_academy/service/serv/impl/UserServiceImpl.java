@@ -11,10 +11,10 @@ import com.it_academy.util.log.Logger;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
-@Controller
+@Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRep;
     private final EntityDtoMapper mapper;
