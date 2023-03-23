@@ -37,6 +37,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    private Role role;
+
     public enum Role {
         SECURE_API_USER, ADMINISTRATOR, SALE_USER, CUSTOMER_USER
     }
