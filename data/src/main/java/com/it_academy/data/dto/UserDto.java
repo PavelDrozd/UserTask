@@ -1,4 +1,4 @@
-package com.it_academy.service.dto;
+package com.it_academy.data.dto;
 
 import lombok.Data;
 
