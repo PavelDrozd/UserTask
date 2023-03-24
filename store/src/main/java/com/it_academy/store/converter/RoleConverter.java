@@ -14,24 +14,24 @@ public class RoleConverter implements AttributeConverter<User.Role, Integer> {
     public Integer convertToDatabaseColumn(User.Role attribute) {
         switch (attribute) {
             case SALE_USER:
-                return 2;
-            case ADMINISTRATOR:
-                return 3;
-            case SECURE_API_USER:
-                return 4;
-            default:
                 return 1;
+            case ADMINISTRATOR:
+                return 2;
+            case SECURE_API_USER:
+                return 3;
+            default:
+                return 0;
         }
     }
 
     @Override
     public User.Role convertToEntityAttribute(Integer dbData) {
         switch (dbData) {
-            case 2:
+            case 1:
                 return User.Role.SALE_USER;
-            case 3:
+            case 2:
                 return User.Role.ADMINISTRATOR;
-            case 4:
+            case 3:
                 return User.Role.SECURE_API_USER;
             default:
                 return User.Role.CUSTOMER_USER;

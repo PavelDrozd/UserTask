@@ -9,6 +9,7 @@ import org.hibernate.Hibernate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Objects;
@@ -21,7 +22,7 @@ import java.util.Objects;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -37,10 +38,11 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "role_id")
     private Role role;
 
     public enum Role {
-        SECURE_API_USER, ADMINISTRATOR, SALE_USER, CUSTOMER_USER
+        CUSTOMER_USER, SALE_USER, ADMINISTRATOR, SECURE_API_USER
     }
 
     @Override
