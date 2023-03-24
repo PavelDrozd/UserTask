@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<nav class="navbar navbar-expand-lg bg-light" th:fragment="navbar">
+    <a href="/" th:text="#{msg.navbar.title}"></a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link" href="/users" th:text="#{msg.navbar.users}"></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="users/register" th:text="#{msg.navbar.register}"></a>
+        </li>
+    </ul>
+</nav>
+</html>
