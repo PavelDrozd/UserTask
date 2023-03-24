@@ -1,6 +1,6 @@
 package com.it_academy.service.serv.impl;
 
-import com.it_academy.data.dto.UserDto;
+import com.it_academy.data.dto.user.UserDto;
 import com.it_academy.exception.service.ServiceNotFoundException;
 import com.it_academy.exception.service.ServiceValidationException;
 import com.it_academy.service.serv.UserService;

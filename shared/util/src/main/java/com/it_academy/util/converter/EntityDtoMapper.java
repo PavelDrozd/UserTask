@@ -1,7 +1,7 @@
 package com.it_academy.util.converter;
 
 
-import com.it_academy.data.dto.UserDto;
+import com.it_academy.data.dto.user.UserDto;
 import com.it_academy.store.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

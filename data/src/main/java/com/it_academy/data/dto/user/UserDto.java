@@ -1,4 +1,4 @@
-package com.it_academy.data.dto;
+package com.it_academy.data.dto.user;
 
 import lombok.Data;
 
