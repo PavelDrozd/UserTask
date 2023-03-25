@@ -23,7 +23,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserDto create(UserDto userDto) {
         checkUserNull(userDto);
-        userDto.setRole(UserDto.Role.CUSTOMER_USER);
+        if (userDto.getRole() == null){
+            userDto.setRole(UserDto.Role.CUSTOMER_USER);
+        }
         User user = userRep.save(mapper.mapToUser(userDto));
         return mapper.mapToUserDto(user);
     }
