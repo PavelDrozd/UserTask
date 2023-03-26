@@ -27,10 +27,10 @@ public class User {
     private Long id;
 
     @Column(name = "firstname")
-    private String firstname;
+    private String firstName;
 
     @Column(name = "lastname")
-    private String lastname;
+    private String lastName;
 
     @Column(name = "patronymic")
     private String patronymic;

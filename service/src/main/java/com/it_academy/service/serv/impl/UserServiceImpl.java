@@ -56,6 +56,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void delete(Long id) {
         userRep.findById(id).orElseThrow(() -> new ServiceNotFoundException("User doesn't exist"));
+        userRep.deleteById(id);
     }
 
     private static void checkUserNull(UserDto userDto) {
@@ -64,4 +65,8 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    @Override
+    public Page<UserDto> getAllSortedByEmail(Pageable pageable) {
+        return userRep.findAllSortedByEmail(pageable).map(mapper::mapToUserDto);
+    }
 }

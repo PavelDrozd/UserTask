@@ -38,8 +38,8 @@ public class UserRestController {
     }
 
     @GetMapping
-    public Page<UserDto> getAll(Pageable pageable) {
-        return userService.getAll(pageable);
+    public Page<UserDto> getAllSortedByEmail(Pageable pageable) {
+        return userService.getAllSortedByEmail(pageable);
     }
 
     @PostMapping("/register")
