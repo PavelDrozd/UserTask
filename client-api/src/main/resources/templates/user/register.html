@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Register new user</title>
+    <script defer src="/js/jquery-3.6.1.js"></script>
+    <script defer src="/js/user/register.js"></script>
+</head>
+<body>
+<div th:replace="~{navbar::navbar}"></div>
+<div class="container text-left my-2">
+    <h1 th:text="#{msg.register}"></h1>
+    <form class="input-form">
+        <label for="input-firstname" th:text="#{msg.register.firstname}"></label>
+        <input id="input-firstname" type="text" required/>
+        <br/>
+        <label for="input-lastname" th:text="#{msg.register.lastname}"></label>
+        <input id="input-lastname" type="text" required/>
+        <br/>
+        <label for="input-patronymic" th:text="#{msg.register.patronymic}"></label>
+        <input id="input-patronymic" type="text"/>
+        <br/>
+        <label for="input-email" th:text="#{msg.register.email}"></label>
+        <input id="input-email" type="email" required/>
+        <br/>
+        <input name="role" id="CUSTOMER_USER" type="radio" th:text="#{msg.register.customer_user}"/>
+        <input name="role" id="SALE_USER" type="radio" th:text="#{msg.register.sale_user}"/>
+        <input name="role" id="ADMINISTRATOR" type="radio" th:text="#{msg.register.administrator}"/>
+        <input name="role" id="SECURE_API_USER" type="radio" th:text="#{msg.register.secure_api_user}"/>
+        <br/>
+        <button class="create" th:text="#{msg.register}"></button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>User</title>
+</head>
+<body>
+<div th:replace="~{navbar::navbar}"></div>
+<div class="container text-center my-2">
+    <table class="table table-bordered border-primary my-2">
+        <tr>
+            <td th:text="#{msg.user.firstname}"></td>
+            <td th:text="${user.firstName}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{msg.user.lastname}"></td>
+            <td th:text="${user.lastName}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{msg.user.patronymic}"></td>
+            <td th:text="${user.patronymic}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{msg.user.email}"></td>
+            <td th:text="${user.email}"></td>
+        </tr>
+        <tr>
+            <td th:text="#{msg.user.role}"></td>
+            <td th:text="${user.role}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
