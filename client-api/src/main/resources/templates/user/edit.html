@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Edit user</title>
+    <script defer src="/js/jquery-3.6.1.js"></script>
+    <script type="module" src="/js/user/edit.js"></script>
+</head>
+<body>
+<div th:replace="~{navbar::navbar}"></div>
+<div class="container text-left my-2">
+    <h1 th:text="#{msg.edit}"></h1>
+    <form class="input-form">
+        <input id="input-id" th:value="${user.id}" type="hidden"/>
+        <label for="input-firstname" th:text="#{msg.edit.firstname}"></label>
+        <input id="input-firstname" th:value="${user.firstName}" type="text"/>
+        <br/>
+        <label for="input-lastname" th:text="#{msg.edit.lastname}"></label>
+        <input id="input-lastname" th:value="${user.lastName}" type="text"/>
+        <br/>
+        <label for="input-patronymic" th:text="#{msg.edit.patronymic}"></label>
+        <input id="input-patronymic" th:value="${user.patronymic}" type="text"/>
+        <br/>
+        <label for="input-email" th:text="#{msg.edit.email}"></label>
+        <input id="input-email" th:value="${user.email}" type="email"/>
+        <br/>
+        <input name="role" id="CUSTOMER_USER" type="radio" th:text="#{msg.register.customer_user}"/>
+        <input name="role" id="SALE_USER" type="radio" th:text="#{msg.register.sale_user}"/>
+        <input name="role" id="ADMINISTRATOR" type="radio" th:text="#{msg.register.administrator}"/>
+        <input name="role" id="SECURE_API_USER" type="radio" th:text="#{msg.register.secure_api_user}"/>
+        <br/>
+        <button class="edit" th:text="#{msg.edit}"></button>
+    </form>
+</div>
+</body>
+</html>
